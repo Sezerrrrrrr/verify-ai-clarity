@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const Footer = () => {
   return (
@@ -7,11 +7,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-[var(--gradient-hero)] flex items-center justify-center shadow-[var(--shadow-md)]">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-foreground">DentalVerify AI</span>
+            <div className="mb-4">
+              <img src={logo} alt="DentalVerify AI" className="h-10" />
             </div>
             <p className="text-muted-foreground max-w-md">
               AI-powered insurance verification for dental clinics. Save time, reduce errors, and focus on patient care.

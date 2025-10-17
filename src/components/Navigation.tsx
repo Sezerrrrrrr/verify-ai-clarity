@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const Navigation = () => {
   return (
@@ -7,11 +7,8 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-[var(--gradient-hero)] flex items-center justify-center shadow-[var(--shadow-md)]">
-              <Shield className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold text-foreground">DentalVerify AI</span>
+          <div className="flex items-center">
+            <img src={logo} alt="DentalVerify AI" className="h-10" />
           </div>
           
           {/* Navigation links */}
