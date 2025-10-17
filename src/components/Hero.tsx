@@ -24,8 +24,11 @@ const Hero = () => {
             <span className="text-sm font-medium">SOC2 & HIPAA Compliant</span>
           </div>
         </div>
-        
-        <div className="w-full backdrop-blur-xl bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,0.15)_50%,_transparent_100%)] p-12 mb-8">
+      </div>
+      
+      {/* Full-width blur container */}
+      <div className="w-full backdrop-blur-xl bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,0.15)_50%,_transparent_100%)] py-12 relative z-20">
+        <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
               Save 200+ Hours Monthly on Insurance Verification
@@ -36,7 +39,9 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-20">
         <div className="max-w-4xl mx-auto text-center text-white">
           
           {/* CTA Buttons */}
