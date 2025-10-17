@@ -23,8 +23,10 @@ const Hero = () => {
             <Shield className="w-4 h-4" />
             <span className="text-sm font-medium">SOC2 & HIPAA Compliant</span>
           </div>
-          
-          <div className="backdrop-blur-xl bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,0.15)_50%,_transparent_100%)] p-12 mb-8">
+        </div>
+        
+        <div className="w-full backdrop-blur-xl bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,0.15)_50%,_transparent_100%)] p-12 mb-8">
+          <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
               Save 200+ Hours Monthly on Insurance Verification
             </h1>
@@ -33,6 +35,9 @@ const Hero = () => {
               AI-powered automation that verifies dental insurance in seconds, eliminates billing errors, and lets your team focus on patient care.
             </p>
           </div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto text-center text-white">
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
