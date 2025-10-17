@@ -24,7 +24,7 @@ const Hero = () => {
             <span className="text-sm font-medium">SOC2 & HIPAA Compliant</span>
           </div>
           
-          <div className="backdrop-blur-md bg-black/20 rounded-2xl p-8 mb-8">
+          <div className="backdrop-blur-md bg-gradient-to-b from-black/30 via-black/20 to-transparent p-8 mb-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
               Save 200+ Hours Monthly on Insurance Verification
             </h1>
