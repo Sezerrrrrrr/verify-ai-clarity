@@ -1,8 +1,6 @@
 import logo from "@/assets/logo.svg";
-
 const Footer = () => {
-  return (
-    <footer className="bg-secondary/20 border-t border-border py-12">
+  return <footer className="bg-secondary/20 border-t border-border py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -25,12 +23,12 @@ const Footer = () => {
           
           {/* Links */}
           <div>
-            <h3 className="font-bold text-foreground mb-4">Product</h3>
+            
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Security</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Integrations</a></li>
+              
+              
+              
+              
             </ul>
           </div>
           
@@ -49,8 +47,6 @@ const Footer = () => {
           <p>&copy; 2025 DentalVerify AI. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

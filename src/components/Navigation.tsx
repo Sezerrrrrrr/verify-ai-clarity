@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.svg";
-
 const Navigation = () => {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -26,17 +24,14 @@ const Navigation = () => {
           
           {/* CTA */}
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="hidden sm:inline-flex">
-              Sign In
-            </Button>
+            <Button variant="ghost" className="hidden sm:inline-flex">Log
+ In</Button>
             <Button className="bg-primary hover:bg-primary/90">
               Get Started
             </Button>
           </div>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navigation;

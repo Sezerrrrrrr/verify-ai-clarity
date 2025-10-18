@@ -5,10 +5,8 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main>
         <Hero />
@@ -21,11 +19,9 @@ const Index = () => {
         <section id="testimonials">
           <Testimonials />
         </section>
-        <CTA />
+        
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
