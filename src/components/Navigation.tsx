@@ -24,8 +24,7 @@ const Navigation = () => {
           
           {/* CTA */}
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="hidden sm:inline-flex">Log
- In</Button>
+            
             <Button className="bg-primary hover:bg-primary/90">
               Get Started
             </Button>
