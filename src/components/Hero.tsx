@@ -33,7 +33,9 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
-            <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-lg px-8 py-6">Get started</Button>
+            <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-lg px-8 py-6" asChild>
+              <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">Get started</a>
+            </Button>
           </div>
           
           {/* Social proof */}
