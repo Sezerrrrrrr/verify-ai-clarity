@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Trust badge */}
           <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm border-2 border-white/40 rounded-full px-6 py-3 mb-8 animate-fade-in shadow-lg hover:bg-white/25 transition-all hover:scale-105">
-            <Shield className="w-5 h-5 text-accent" />
+            <Shield className="w-5 h-5 text-white" />
             <span className="text-base font-semibold">SOC2 & HIPAA Compliant</span>
           </div>
         </div>
