@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] backdrop-blur-xl bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,0.15)_50%,_transparent_100%)] p-12 mb-8">
+        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] p-12 mb-8">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">Save 200+ Hours Monthly on Insurance Verification With AI</h1>
             
