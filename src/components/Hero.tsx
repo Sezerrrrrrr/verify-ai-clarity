@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, CheckCircle2 } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg-dental.png";
 const Hero = () => {
   return <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background with gradient overlay */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-90 z-10" />
-        <img src={heroBg} alt="AI-powered insurance verification" className="w-full h-full object-cover" />
+        <img src={heroBg} alt="AI-powered insurance verification in dental clinic" className="w-full h-full object-cover" />
       </div>
       
       {/* Content */}
