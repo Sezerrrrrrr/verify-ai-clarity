@@ -24,7 +24,7 @@ const benefits = [
     icon: Zap,
     title: "Instant Verification",
     description: "Get real-time insurance eligibility and benefits information in seconds, not hours.",
-    stat: "<10 second checks"
+    stat: "<10 minutes checks"
   }
 ];
 
