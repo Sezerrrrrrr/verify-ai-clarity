@@ -49,12 +49,11 @@ const Hero = () => {
           {/* Audio Player */}
           <div className="flex justify-center mb-8 animate-fade-in">
             <Button
-              size="lg"
+              size="icon"
               onClick={toggleAudio}
-              className="border-2 border-white/40 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:scale-105 transition-all text-lg px-8 py-6"
+              className="h-16 w-16 rounded-full border-2 border-white/40 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:scale-110 transition-all"
             >
-              {isPlaying ? <Pause className="mr-2" /> : <Play className="mr-2" />}
-              {isPlaying ? "Pause Demo" : "Play Demo"}
+              {isPlaying ? <Pause className="h-8 w-8" /> : <Play className="h-8 w-8" />}
             </Button>
             <audio
               ref={audioRef}
