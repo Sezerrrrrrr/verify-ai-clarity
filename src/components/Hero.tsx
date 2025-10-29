@@ -46,15 +46,8 @@ const Hero = () => {
         
         <div className="max-w-4xl mx-auto text-center text-white">
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in">
-            <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-lg px-8 py-6" asChild>
-              <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">Talk to the CEO</a>
-            </Button>
-          </div>
-
           {/* Audio Player */}
-          <div className="flex justify-center mb-12 animate-fade-in">
+          <div className="flex justify-center mb-8 animate-fade-in">
             <Button
               size="lg"
               onClick={toggleAudio}
@@ -68,6 +61,13 @@ const Hero = () => {
               src={audioFile}
               onEnded={() => setIsPlaying(false)}
             />
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
+            <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-lg px-8 py-6" asChild>
+              <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">Talk to the CEO</a>
+            </Button>
           </div>
           
           {/* Social proof */}
