@@ -32,19 +32,16 @@ const Hero = () => {
             <Shield className="w-5 h-5 text-white" />
             <span className="text-base font-semibold">SOC2 & HIPAA Compliant</span>
           </div>
-        </div>
-        
-        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] p-12 mb-8">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">Save 200+ Hours Monthly on Insurance Verification With AI</h1>
-            
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto animate-fade-in">Our AI agent calls your patients' insurances to verify eligibility and covering details, saving you time and money
-
+          
+          {/* Heading */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
+            Save 200+ Hours Monthly on Insurance Verification With AI
+          </h1>
+          
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in">
+            Our AI agent calls your patients' insurances to verify eligibility and covering details, saving you time and money
           </p>
-          </div>
-        </div>
-        
-        <div className="max-w-4xl mx-auto text-center text-white">
           
           {/* Audio Player */}
           <div className="flex justify-center mb-8 animate-fade-in">
