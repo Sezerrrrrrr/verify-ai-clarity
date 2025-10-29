@@ -1,7 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Shield, CheckCircle2, Play, Pause } from "lucide-react";
 import heroBg from "@/assets/hero-bg-dental.png";
+import audioFile from "@/assets/audio-insurance-verification.mp4";
+import { useState, useRef } from "react";
 const Hero = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -31,10 +47,27 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center text-white">
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in">
             <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-lg px-8 py-6" asChild>
               <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">Talk to the CEO</a>
             </Button>
+          </div>
+
+          {/* Audio Player */}
+          <div className="flex justify-center mb-12 animate-fade-in">
+            <Button
+              size="lg"
+              onClick={toggleAudio}
+              className="border-2 border-white/40 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:scale-105 transition-all text-lg px-8 py-6"
+            >
+              {isPlaying ? <Pause className="mr-2" /> : <Play className="mr-2" />}
+              {isPlaying ? "Pause Demo" : "Play Demo"}
+            </Button>
+            <audio
+              ref={audioRef}
+              src={audioFile}
+              onEnded={() => setIsPlaying(false)}
+            />
           </div>
           
           {/* Social proof */}
