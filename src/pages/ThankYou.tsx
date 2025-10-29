@@ -6,25 +6,48 @@ import { useEffect } from "react";
 const ThankYou = () => {
   useEffect(() => {
     // Meta Pixel Code
-    (function(f: any, b: any, e: string, v: string, n?: any, t?: any, s?: any) {
-      if (f.fbq) return;
-      n = f.fbq = function() {
-        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = true;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = true;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    const w = window as any;
     
-    (window as any).fbq('init', '1124728156513673');
-    (window as any).fbq('track', 'PageView');
+    if (w.fbq) return;
+    
+    const fbq: any = function(...args: any[]) {
+      if (fbq.callMethod) {
+        fbq.callMethod.apply(fbq, args);
+      } else {
+        fbq.queue.push(args);
+      }
+    };
+    
+    if (!w._fbq) w._fbq = fbq;
+    fbq.push = fbq;
+    fbq.loaded = true;
+    fbq.version = '2.0';
+    fbq.queue = [];
+    
+    w.fbq = fbq;
+    
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+    
+    const firstScript = document.getElementsByTagName('script')[0];
+    if (firstScript && firstScript.parentNode) {
+      firstScript.parentNode.insertBefore(script, firstScript);
+    }
+    
+    // Initialize and track
+    w.fbq('init', '1124728156513673');
+    w.fbq('track', 'PageView');
+    
+    // Add noscript fallback
+    const noscript = document.createElement('noscript');
+    const img = document.createElement('img');
+    img.height = 1;
+    img.width = 1;
+    img.style.display = 'none';
+    img.src = 'https://www.facebook.com/tr?id=1124728156513673&ev=PageView&noscript=1';
+    noscript.appendChild(img);
+    document.body.appendChild(noscript);
   }, []);
   return (
     <div className="min-h-screen">
