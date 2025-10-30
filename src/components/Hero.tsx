@@ -37,7 +37,7 @@ const Hero = () => {
           </h1>
           
           {/* Description */}
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in">Our AI agent calls your patients' insurances to verify eligibility and covering details, saving you time and money - for $1.5/verification</p>
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in">Our AI agent calls your patients' insurances to verify eligibility and covering details, saving you time and money - for $1.50/verification</p>
           
           {/* Audio Player */}
           <div className="flex justify-center mb-8 animate-fade-in">
