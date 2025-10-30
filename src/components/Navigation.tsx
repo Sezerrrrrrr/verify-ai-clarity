@@ -25,7 +25,7 @@ const Navigation = () => {
           {/* CTA */}
           <div className="flex items-center gap-4">
             
-            <Button className="bg-primary hover:bg-primary/90" asChild>
+            <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
               <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">
                 Talk to the CEO
               </a>
