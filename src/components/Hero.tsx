@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, CheckCircle2, Play, Pause } from "lucide-react";
 import heroBg from "@/assets/hero-bg-new.png";
 import audioFile from "@/assets/audio-insurance-verification.mp4";
+import featuredLogo from "@/assets/featured-logo.png";
 import { useState, useRef } from "react";
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -48,10 +49,16 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in px-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in px-4">
             <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-base md:text-lg px-4 md:px-6 py-6 max-w-xs mx-auto sm:mx-0" asChild>
               <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">Talk to the CEO</a>
             </Button>
+          </div>
+
+          {/* Featured on */}
+          <div className="flex flex-col items-center gap-3 mb-12 animate-fade-in">
+            <p className="text-white/70 text-sm uppercase tracking-wider">Featured on:</p>
+            <img src={featuredLogo} alt="Featured on" className="h-8 md:h-10" />
           </div>
           
           {/* Social proof */}
