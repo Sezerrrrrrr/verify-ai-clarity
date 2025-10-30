@@ -32,12 +32,12 @@ const Hero = () => {
           </div>
           
           {/* Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in">
             Save 200+ Hours Monthly on Insurance Verification With AI
           </h1>
           
           {/* Description */}
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in">Our AI agent calls your patients' insurances to verify eligibility and covering details, saving you time and money - for $2/successful verification</p>
+          <p className="text-base md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in">Our AI agent calls your patients' insurances to verify eligibility and covering details, saving you time and money - for $2/successful verification</p>
           
           {/* Audio Player */}
           <div className="flex justify-center mb-8 animate-fade-in">
