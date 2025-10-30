@@ -56,7 +56,7 @@ const Hero = () => {
           </div>
 
           {/* Featured on */}
-          <div className="flex flex-col items-center gap-3 mb-6 md:mb-12 animate-fade-in">
+          <div className="flex flex-col items-center gap-3 mb-4 md:mb-12 animate-fade-in">
             <p className="text-white/70 text-sm uppercase tracking-wider">Featured on:</p>
             <img src={featuredLogo} alt="Featured on" className="h-12 md:h-20" />
           </div>
