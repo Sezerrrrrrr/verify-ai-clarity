@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, CheckCircle2, Play, Pause } from "lucide-react";
-import heroBg from "@/assets/hero-bg-ai-voice.png";
+import heroBg from "@/assets/hero-bg-new.png";
 import audioFile from "@/assets/audio-insurance-verification.mp4";
 import { useState, useRef } from "react";
 const Hero = () => {
