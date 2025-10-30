@@ -17,7 +17,7 @@ const Hero = () => {
       setIsPlaying(!isPlaying);
     }
   };
-  return <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-24 md:pt-0">
+  return <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-0">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img src={heroBg} alt="AI-powered insurance verification in dental clinic" className="w-full h-full object-cover" />
@@ -42,8 +42,8 @@ const Hero = () => {
           
           {/* Audio Player */}
           <div className="flex justify-center mb-8 animate-fade-in">
-            <Button size="icon" onClick={toggleAudio} className="h-16 w-16 rounded-full border-2 border-white/40 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:scale-110 transition-all">
-              {isPlaying ? <Pause className="h-8 w-8" /> : <Play className="h-8 w-8" />}
+            <Button size="icon" onClick={toggleAudio} className="h-12 w-12 rounded-full border-2 border-white/40 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:scale-110 transition-all">
+              {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
             </Button>
             <audio ref={audioRef} src={audioFile} onEnded={() => setIsPlaying(false)} />
           </div>
