@@ -6,7 +6,6 @@ import { useState, useRef } from "react";
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
-
   const toggleAudio = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -17,7 +16,6 @@ const Hero = () => {
       setIsPlaying(!isPlaying);
     }
   };
-
   return <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -39,24 +37,14 @@ const Hero = () => {
           </h1>
           
           {/* Description */}
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in">
-            Our AI agent calls your patients' insurances to verify eligibility and covering details, saving you time and money
-          </p>
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in">Our AI agent calls your patients' insurances to verify eligibility and covering details, saving you time and money - for $1.5/verification</p>
           
           {/* Audio Player */}
           <div className="flex justify-center mb-8 animate-fade-in">
-            <Button
-              size="icon"
-              onClick={toggleAudio}
-              className="h-16 w-16 rounded-full border-2 border-white/40 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:scale-110 transition-all"
-            >
+            <Button size="icon" onClick={toggleAudio} className="h-16 w-16 rounded-full border-2 border-white/40 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:scale-110 transition-all">
               {isPlaying ? <Pause className="h-8 w-8" /> : <Play className="h-8 w-8" />}
             </Button>
-            <audio
-              ref={audioRef}
-              src={audioFile}
-              onEnded={() => setIsPlaying(false)}
-            />
+            <audio ref={audioRef} src={audioFile} onEnded={() => setIsPlaying(false)} />
           </div>
 
           {/* CTA Buttons */}
