@@ -73,7 +73,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent" />
-              <span className="text-sm md:text-base">Ultra-Fast Setup</span>
+              <span className="text-sm md:text-base">No contract commitment </span>
             </div>
           </div>
         </div>
