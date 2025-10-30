@@ -64,16 +64,16 @@ const Hero = () => {
           {/* Social proof */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/80 animate-fade-in">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-accent" />
-              <span>30+ Clinics Trust Us</span>
+              <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+              <span className="text-sm md:text-base">30+ Clinics Trust Us</span>
             </div>
             <div className="flex items-center gap-2">
               
               
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-accent" />
-              <span>Ultra-Fast Setup</span>
+              <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+              <span className="text-sm md:text-base">Ultra-Fast Setup</span>
             </div>
           </div>
         </div>
