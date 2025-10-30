@@ -17,7 +17,7 @@ const Hero = () => {
       setIsPlaying(!isPlaying);
     }
   };
-  return <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-0">
+  return <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-24 md:pt-0">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img src={heroBg} alt="AI-powered insurance verification in dental clinic" className="w-full h-full object-cover" />
