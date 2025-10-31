@@ -27,7 +27,7 @@ const Navigation = () => {
             
             <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
               <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">
-                Talk to the CEO
+                Talk to a human
               </a>
             </Button>
           </div>
