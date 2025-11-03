@@ -1,5 +1,6 @@
 import { Clock, DollarSign, Shield, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const benefits = [
   {
@@ -29,10 +30,12 @@ const benefits = [
 ];
 
 const Benefits = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
     <section className="py-24 bg-[var(--gradient-subtle)]">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div ref={ref} className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Built for Modern Dental Practices
           </h2>
@@ -47,8 +50,10 @@ const Benefits = () => {
             return (
               <Card 
                 key={index}
-                className="p-8 bg-[var(--gradient-card)] border-border hover:shadow-[var(--shadow-xl)] transition-all duration-300 hover:scale-105 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`p-8 bg-[var(--gradient-card)] border-border hover:shadow-[var(--shadow-xl)] transition-all duration-700 hover:scale-105 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: isVisible ? `${index * 100}ms` : '0ms' }}
               >
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
                   <Icon className="w-7 h-7 text-primary" />

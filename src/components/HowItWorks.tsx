@@ -1,4 +1,5 @@
 import { Upload, Brain, CheckCircle } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const steps = [
   {
@@ -19,10 +20,12 @@ const steps = [
 ];
 
 const HowItWorks = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div ref={ref} className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Simple Setup, Powerful Results
           </h2>
@@ -37,8 +40,10 @@ const HowItWorks = () => {
             return (
               <div 
                 key={index}
-                className="relative text-center animate-fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
+                className={`relative text-center transition-all duration-700 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }}
               >
                 {/* Step number */}
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl shadow-[var(--shadow-glow)]">
