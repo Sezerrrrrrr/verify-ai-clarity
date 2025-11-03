@@ -1,4 +1,6 @@
 import logo from "@/assets/logo.svg";
+import { Linkedin } from "lucide-react";
+
 const Footer = () => {
   return <footer className="bg-secondary/20 border-t border-border py-12">
       <div className="container mx-auto px-6">
@@ -18,6 +20,17 @@ const Footer = () => {
               <span className="inline-flex items-center gap-1 bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">
                 HIPAA Compliant
               </span>
+            </div>
+            <div className="mt-4">
+              <a 
+                href="https://www.linkedin.com/company/azops/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                aria-label="Visit our LinkedIn page"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
             </div>
           </div>
           
