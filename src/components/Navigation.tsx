@@ -26,7 +26,7 @@ const Navigation = () => {
           <div className="flex items-center gap-4">
             
             <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
-              <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/sezer123/call" target="_blank" rel="noopener noreferrer">
                 Talk to a human
               </a>
             </Button>

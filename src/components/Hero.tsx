@@ -51,7 +51,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in px-4">
             <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-base md:text-lg px-4 md:px-6 py-6 max-w-xs mx-auto sm:mx-0" asChild>
-              <a href="https://calendly.com/sezer-omnisales/call" target="_blank" rel="noopener noreferrer">Talk to a human</a>
+              <a href="https://calendly.com/sezer123/call" target="_blank" rel="noopener noreferrer">Talk to a human</a>
             </Button>
           </div>
 
