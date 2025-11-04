@@ -3,6 +3,7 @@ import { ArrowRight, Shield, CheckCircle2, Play, Pause } from "lucide-react";
 import heroBg from "@/assets/hero-bg-new.png";
 import audioFile from "@/assets/audio-insurance-verification.mp4";
 import featuredLogo from "@/assets/featured-logo.png";
+import bbbLogo from "@/assets/bbb-logo.png";
 import { useState, useRef } from "react";
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -58,7 +59,10 @@ const Hero = () => {
           {/* Featured on */}
           <div className="flex flex-col items-center gap-3 mb-4 md:mb-12 animate-fade-in" style={{ animationDelay: '600ms' }}>
             <p className="text-white/70 text-sm uppercase tracking-wider">Featured on:</p>
-            <img src={featuredLogo} alt="Featured on" className="h-12 md:h-20" />
+            <div className="flex items-center gap-6 md:gap-8">
+              <img src={featuredLogo} alt="Featured on USA Today" className="h-12 md:h-20" />
+              <img src={bbbLogo} alt="BBB Accredited Business" className="h-12 md:h-20" />
+            </div>
           </div>
           
           {/* Social proof */}
