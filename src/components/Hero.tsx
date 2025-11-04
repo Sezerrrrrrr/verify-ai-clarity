@@ -57,12 +57,9 @@ const Hero = () => {
           </div>
 
           {/* Featured on */}
-          <div className="flex flex-col items-center gap-3 mb-4 md:mb-12 animate-fade-in" style={{ animationDelay: '600ms' }}>
-            <p className="text-white/70 text-sm uppercase tracking-wider">Featured on:</p>
-            <div className="flex items-center gap-6 md:gap-8">
-              <img src={featuredLogo} alt="Featured on USA Today" className="h-12 md:h-20" />
-              <img src={bbbLogo} alt="BBB Accredited Business" className="h-12 md:h-20" />
-            </div>
+          <div className="flex items-center justify-center gap-6 md:gap-8 mb-4 md:mb-12 animate-fade-in" style={{ animationDelay: '600ms' }}>
+            <img src={featuredLogo} alt="Featured on USA Today" className="h-12 md:h-20" />
+            <img src={bbbLogo} alt="BBB Accredited Business" className="h-12 md:h-20" />
           </div>
           
           {/* Social proof */}
