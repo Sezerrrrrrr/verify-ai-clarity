@@ -30,7 +30,7 @@ const Navigation = () => {
             
             <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
               <a href="https://calendly.com/sezer123/call" target="_blank" rel="noopener noreferrer">
-                Talk to a human
+                See how it works
               </a>
             </Button>
           </div>
