@@ -2,8 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, CheckCircle2, Play, Pause } from "lucide-react";
 import heroBg from "@/assets/hero-bg-new.png";
 import audioFile from "@/assets/audio-insurance-verification.mp4";
-import featuredLogo from "@/assets/featured-logo.png";
-import bbbLogo from "@/assets/bbb-logo.png";
+import smileClinicLogo from "@/assets/customer-smile-clinic.png";
+import customerLogo1 from "@/assets/customer-logo-1.png";
+import customerLogo2 from "@/assets/customer-logo-2.png";
+import customerLogo3 from "@/assets/customer-logo-3.png";
+import dentylisLogo from "@/assets/customer-dentylis.png";
+import customerLogo5 from "@/assets/customer-logo-5.png";
 import { useState, useRef } from "react";
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -66,12 +70,16 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Featured on */}
-          <div className="flex items-center justify-center gap-6 md:gap-8 mb-4 md:mb-12 animate-fade-in" style={{
+          {/* Customer Logos */}
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 items-center justify-items-center mb-4 md:mb-12 animate-fade-in max-w-4xl mx-auto" style={{
           animationDelay: '600ms'
         }}>
-            <img src={featuredLogo} alt="Featured on USA Today" className="h-12 md:h-20" />
-            <img src={bbbLogo} alt="BBB Accredited Business" className="h-12 md:h-20" />
+            <img src={smileClinicLogo} alt="Smile Clinic" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
+            <img src={customerLogo1} alt="Customer logo" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
+            <img src={customerLogo2} alt="Customer logo" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
+            <img src={customerLogo3} alt="Customer logo" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
+            <img src={dentylisLogo} alt="Dentylis" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
+            <img src={customerLogo5} alt="Customer logo" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
           </div>
           
           {/* Social proof */}
