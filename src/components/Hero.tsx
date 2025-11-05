@@ -42,9 +42,7 @@ const Hero = () => {
           {/* Heading */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in" style={{
           animationDelay: '200ms'
-        }}>
-            Save 200+ Hours Monthly on Insurance Verification With AI
-          </h1>
+        }}>Save 200+ Hours Monthly on Dental Insurance Verification With AI</h1>
           
           {/* Description */}
           <p className="text-base md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in" style={{
