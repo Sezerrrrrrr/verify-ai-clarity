@@ -16,7 +16,10 @@ const Demo = () => {
           <div className="container mx-auto px-6 relative z-20 py-12">
             <div className="max-w-5xl mx-auto text-center">
               {/* Title */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 text-white leading-tight">See a demo of the AI agent getting full coverage details over the phone</h1>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight">See a demo of the AI agent getting full coverage details over the phone</h1>
+              
+              {/* Subtitle */}
+              <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-12">Save $5000 per months on insurance verification for $2 per successful verification</p>
               
               {/* Loom Video */}
               <div className="relative w-full mb-8" style={{
