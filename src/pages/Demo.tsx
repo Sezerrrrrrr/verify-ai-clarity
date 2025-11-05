@@ -26,7 +26,7 @@ const Demo = () => {
               </div>
               
               {/* CTA Button */}
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-xl hover:scale-105 transition-transform" asChild>
+              <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-base md:text-lg px-4 md:px-6 py-6" asChild>
                 <a href="https://calendly.com/sezer123/call" target="_blank" rel="noopener noreferrer">
                   Book a call
                 </a>
