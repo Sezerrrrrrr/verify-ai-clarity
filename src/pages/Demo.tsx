@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg-new.png";
+import heroBg from "@/assets/hero-bg-dental-clinic.png";
 const Demo = () => {
   return <div className="min-h-screen">
       <Navigation />

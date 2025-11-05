@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.svg";
-import heroBg from "@/assets/hero-bg-ai-voice.png";
+import heroBg from "@/assets/hero-bg-dental-clinic.png";
 import { useEffect } from "react";
 
 const ThankYou = () => {
