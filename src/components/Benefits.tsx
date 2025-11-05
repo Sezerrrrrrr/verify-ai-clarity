@@ -1,28 +1,31 @@
-import { Clock, DollarSign, Shield, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import iconTime from "@/assets/icon-time.svg";
+import iconMoney from "@/assets/icon-money.svg";
+import iconSecurity from "@/assets/icon-security.svg";
+import iconZap from "@/assets/icon-zap.svg";
 
 const benefits = [
   {
-    icon: Clock,
+    icon: iconTime,
     title: "Save 200+ Hours Monthly",
     description: "Automate the tedious insurance verification process and free up your staff for patient care.",
     stat: "95% time reduction"
   },
   {
-    icon: DollarSign,
+    icon: iconMoney,
     title: "Maximize Revenue",
     description: "Eliminate billing errors and ensure accurate claims submission the first time, every time.",
     stat: "40% fewer denials"
   },
   {
-    icon: Shield,
+    icon: iconSecurity,
     title: "Enterprise-Grade Security",
     description: "SOC2-certified and HIPAA-compliant infrastructure protecting your patient data 24/7.",
     stat: "100% compliant"
   },
   {
-    icon: Zap,
+    icon: iconZap,
     title: "Instant Verification",
     description: "Get real-time insurance eligibility and benefits information in minutes, not hours.",
     stat: "<10 minutes checks"
@@ -46,7 +49,6 @@ const Benefits = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
             return (
               <Card 
                 key={index}
@@ -56,7 +58,7 @@ const Benefits = () => {
                 style={{ transitionDelay: isVisible ? `${index * 100}ms` : '0ms' }}
               >
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                  <Icon className="w-7 h-7 text-primary" />
+                  <img src={benefit.icon} alt="" className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">{benefit.title}</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">{benefit.description}</p>
