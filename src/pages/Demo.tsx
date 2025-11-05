@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg-new.png";
 const Demo = () => {
   return <div className="min-h-screen">
@@ -18,11 +19,18 @@ const Demo = () => {
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 text-white leading-tight">See a demo of the AI agent getting full coverage details over the phone</h1>
               
               {/* Loom Video */}
-              <div className="relative w-full" style={{
+              <div className="relative w-full mb-8" style={{
               paddingBottom: '56.25%'
             }}>
                 <iframe src="https://www.loom.com/embed/1d7097f42a7c4cf5b10c560fe6f03fad?sid=a8f5e5e8-5a8a-4f9a-9f5a-5e5e5e5e5e5e" frameBorder="0" allowFullScreen className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl" title="AI Agent Demo Video" />
               </div>
+              
+              {/* CTA Button */}
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-xl hover:scale-105 transition-transform" asChild>
+                <a href="https://calendly.com/sezer123/call" target="_blank" rel="noopener noreferrer">
+                  Book a call
+                </a>
+              </Button>
             </div>
           </div>
         </section>
