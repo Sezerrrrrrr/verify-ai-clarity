@@ -25,7 +25,7 @@ const Demo = () => {
               <div className="relative w-full mb-8" style={{
               paddingBottom: '56.25%'
             }}>
-                <iframe src="https://www.loom.com/embed/1d7097f42a7c4cf5b10c560fe6f03fad?sid=a8f5e5e8-5a8a-4f9a-9f5a-5e5e5e5e5e5e" frameBorder="0" allowFullScreen className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl" title="AI Agent Demo Video" />
+                <iframe src="https://www.loom.com/embed/1bc2960a63f44ee4b39d832ec7a25eb7" frameBorder="0" allowFullScreen className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl" title="AI Agent Demo Video" />
               </div>
               
               {/* CTA Button */}
