@@ -61,7 +61,7 @@ const Hero = () => {
           animationDelay: '700ms'
         }}>
             <div className="flex items-center gap-1 sm:gap-2">
-              <CheckCircle2 className="w-3 h-3 md:w-5 md:h-5 text-accent" />
+              <CheckCircle2 className="w-3 h-3 md:w-5 md:h-5 text-white" />
               <span className="text-xs md:text-base">30+ Clinics Trust Us</span>
             </div>
             <div className="flex items-center gap-1 sm:gap-2">
@@ -69,7 +69,7 @@ const Hero = () => {
               
             </div>
             <div className="flex items-center gap-1 sm:gap-2">
-              <CheckCircle2 className="w-3 h-3 md:w-5 md:h-5 text-accent" />
+              <CheckCircle2 className="w-3 h-3 md:w-5 md:h-5 text-white" />
               <span className="text-xs md:text-base">No contract commitment </span>
             </div>
           </div>
