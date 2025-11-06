@@ -1,27 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, CheckCircle2, Play, Pause } from "lucide-react";
+import { Shield, CheckCircle2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg-dental-clinic.png";
-import audioFile from "@/assets/audio-insurance-verification.mp4";
 import smileClinicLogo from "@/assets/customer-smile-clinic.png";
 import customerLogo1 from "@/assets/customer-logo-1.png";
 import customerLogo2 from "@/assets/customer-logo-2.png";
 import customerLogo3 from "@/assets/customer-logo-3.png";
 import dentylisLogo from "@/assets/customer-dentylis.png";
 import customerLogo5 from "@/assets/customer-logo-5.png";
-import { useState, useRef } from "react";
 const Hero = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const toggleAudio = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
   return <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-0">
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -49,16 +35,6 @@ const Hero = () => {
           animationDelay: '300ms'
         }}>Our AI agent calls your patients' insurances to verify eligibility and coverage details, saving you time and money - for $2/successful verification</p>
           
-          {/* Audio Player */}
-          <div className="flex justify-center mb-8 animate-fade-in" style={{
-          animationDelay: '400ms'
-        }}>
-            <Button size="icon" onClick={toggleAudio} className="h-12 w-12 rounded-full border-2 border-white/40 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:scale-110 transition-all">
-              {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
-            </Button>
-            <audio ref={audioRef} src={audioFile} onEnded={() => setIsPlaying(false)} />
-          </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in px-4" style={{
           animationDelay: '500ms'
