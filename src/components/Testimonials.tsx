@@ -27,7 +27,7 @@ const Testimonials = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-24 bg-gradient-to-b from-background via-muted/20 to-background">
       <div className="container mx-auto px-6">
         <div ref={ref} className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
@@ -42,23 +42,26 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className={`p-8 bg-card hover:shadow-[var(--shadow-xl)] transition-all duration-700 ${
+              className={`relative p-8 bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:shadow-2xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-500 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: isVisible ? `${index * 100}ms` : '0ms' }}
             >
-              <div className="flex gap-1 mb-6">
+              {/* Decorative quote mark */}
+              <div className="absolute top-6 right-6 text-6xl text-blue-100 font-serif leading-none">"</div>
+              
+              <div className="flex gap-0.5 mb-6 relative z-10">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star key={i} className="w-4 h-4 fill-blue-400 text-blue-400" />
                 ))}
               </div>
               
-              <p className="text-lg text-foreground mb-6 leading-relaxed italic">
-                "{testimonial.quote}"
+              <p className="text-lg text-foreground/90 mb-8 leading-relaxed italic relative z-10">
+                {testimonial.quote}
               </p>
               
-              <div className="border-t border-border pt-6">
-                <p className="font-bold text-foreground">{testimonial.author}</p>
+              <div className="border-t border-gray-200 pt-6 relative z-10">
+                <p className="font-bold text-foreground mb-1">{testimonial.author}</p>
                 <p className="text-sm text-muted-foreground">{testimonial.role}</p>
               </div>
             </Card>
