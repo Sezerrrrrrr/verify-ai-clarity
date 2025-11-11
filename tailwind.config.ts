@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Satoshi', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         recoleta: ['Playfair Display', 'serif'],
         'sf-pro': ['SF Pro Text', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
