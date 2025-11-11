@@ -50,10 +50,10 @@ const HowItWorks = () => {
                 
                 {/* Arrow connector */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-[60%] w-[80%]">
+                  <div className="hidden lg:block absolute top-10 left-[62%] w-[76%] z-10">
                     <div className="flex items-center">
-                      <div className="flex-1 h-0.5 bg-gradient-to-r from-blue-400/60 to-blue-300/40" />
-                      <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-blue-300/60" />
+                      <div className="flex-1 h-[2px] bg-gradient-to-r from-blue-500 to-blue-400" />
+                      <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-blue-400" />
                     </div>
                   </div>
                 )}
