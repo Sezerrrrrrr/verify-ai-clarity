@@ -44,8 +44,8 @@ const Benefits = () => {
           return <Card key={index} className={`p-8 bg-[var(--gradient-card)] border-border hover:shadow-[var(--shadow-xl)] transition-all duration-700 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
             transitionDelay: isVisible ? `${index * 100}ms` : '0ms'
           }}>
-                <div className="relative w-16 h-16 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 shadow-lg shadow-primary/10 border border-primary/10">
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 to-transparent opacity-50" />
+                <div className="relative w-16 h-16 rounded-3xl bg-gradient-to-br from-background/80 via-primary/5 to-background/60 backdrop-blur-sm flex items-center justify-center mb-6 shadow-lg shadow-primary/20 border border-primary/20">
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-40" />
                   <img src={benefit.icon} alt="" className="w-8 h-8 relative z-10" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">{benefit.title}</h3>
