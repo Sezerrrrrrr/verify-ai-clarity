@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         sans: ['Satoshi', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         recoleta: ['Playfair Display', 'serif'],
+        'sf-pro': ['SF Pro Text', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

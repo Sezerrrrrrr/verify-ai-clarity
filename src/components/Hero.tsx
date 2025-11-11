@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-20">
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Trust badge */}
-          <div className="inline-flex items-center gap-1.5 md:gap-2 bg-white/20 backdrop-blur-sm border border-white/40 rounded-full px-3 py-1.5 md:px-4 md:py-2 mb-8 animate-fade-in shadow-lg hover:bg-white/25 transition-all hover:scale-105" style={{
+          <div className="inline-flex items-center gap-1.5 md:gap-2 bg-white/20 backdrop-blur-sm border border-white/40 rounded-full px-3 py-1.5 md:px-4 md:py-2 mb-8 animate-fade-in shadow-lg hover:bg-white/25 transition-all hover:scale-105 font-sf-pro" style={{
           animationDelay: '100ms'
         }}>
             <Shield className="w-3 h-3 md:w-4 md:h-4 text-white" />
