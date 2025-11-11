@@ -30,7 +30,7 @@ const HowItWorks = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <div className="relative grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {steps.map((step, index) => {
             return (
               <div 
@@ -43,20 +43,22 @@ const HowItWorks = () => {
                 {/* Large step number */}
                 <div className="relative mx-auto mb-8 w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 flex items-center justify-center border border-blue-200/50 shadow-lg shadow-blue-500/10">
                   <span className="text-4xl font-bold text-blue-600">{index + 1}</span>
+                  
+                  {/* Arrow connector - positioned next to number */}
+                  {index < steps.length - 1 && (
+                    <div className="hidden md:block absolute left-full top-1/2 -translate-y-1/2 w-[calc(100vw/3-120px)] max-w-[280px] px-8">
+                      <div className="flex items-center">
+                        <div className="flex-1 h-[3px] bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300" />
+                        <svg className="w-4 h-4 text-blue-400 -ml-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 3l7 7-7 7V3z" />
+                        </svg>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 
                 <h3 className="text-2xl font-bold mb-3 text-foreground">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                
-                {/* Arrow connector */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-[62%] w-[76%] z-10">
-                    <div className="flex items-center">
-                      <div className="flex-1 h-[2px] bg-gradient-to-r from-blue-500 to-blue-400" />
-                      <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-blue-400" />
-                    </div>
-                  </div>
-                )}
               </div>
             );
           })}
