@@ -39,7 +39,12 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in px-4" style={{
           animationDelay: '500ms'
         }}>
-            <Button size="lg" variant="outline" className="border-2 border-white text-black bg-white hover:bg-white/90 text-base md:text-lg px-4 md:px-6 py-6 max-w-xs mx-auto sm:mx-0" asChild>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-white text-black bg-white hover:bg-white hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.8)] text-base md:text-lg px-4 md:px-6 py-6 max-w-xs mx-auto sm:mx-0 shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 hover:brightness-110" 
+              asChild
+            >
               <a href="/demo">See a video demo</a>
             </Button>
           </div>
