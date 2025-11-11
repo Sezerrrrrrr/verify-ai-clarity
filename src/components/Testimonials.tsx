@@ -45,7 +45,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className={`group relative p-8 bg-white border-2 border-transparent hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 transition-all duration-500 overflow-hidden ${
+              className={`group relative p-8 bg-white border-2 border-transparent hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: isVisible ? `${index * 100}ms` : '0ms' }}
@@ -68,13 +68,13 @@ const Testimonials = () => {
               {/* Large decorative quote */}
               <div className="absolute top-4 right-4 text-7xl text-blue-500/10 font-serif leading-none group-hover:text-blue-500/20 transition-colors">"</div>
               
-              <p className="text-lg text-foreground mb-8 leading-relaxed font-medium relative z-10">
+              <p className="text-lg text-foreground mb-8 leading-relaxed font-medium relative z-10 flex-grow">
                 {testimonial.quote}
               </p>
               
-              <div className="relative z-10 flex items-center gap-4">
+              <div className="relative z-10 flex items-center gap-4 mt-auto">
                 {/* Avatar placeholder with gradient */}
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0">
                   {testimonial.author.split(' ').map(n => n[0]).join('')}
                 </div>
                 <div>
