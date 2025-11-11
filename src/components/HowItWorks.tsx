@@ -45,25 +45,37 @@ const HowItWorks = () => {
                 }`}
                 style={{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }}
               >
-                {/* Step number badge */}
-                <div className="inline-block mb-6 px-3 py-1 rounded-full bg-blue-50 text-blue-500 text-sm font-semibold font-sf-pro border border-blue-200 shadow-[0_4px_12px_-2px_rgba(59,130,246,0.3)]">
-                  Step {index + 1}
+                {/* Icon container with step number */}
+                <div className="relative mx-auto mb-8">
+                  {/* Step number above icon */}
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
+                    <div className="px-3 py-1 rounded-full bg-white text-blue-600 text-xs font-bold font-sf-pro border-2 border-blue-100 shadow-sm">
+                      {index + 1}
+                    </div>
+                  </div>
+                  
+                  {/* Icon container */}
+                  <div className="relative w-24 h-24 mx-auto rounded-3xl bg-white flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100">
+                    <Icon className="w-11 h-11 text-blue-600" strokeWidth={2.5} />
+                  </div>
                 </div>
                 
-                {/* Icon container */}
-                <div className="relative w-20 h-20 mx-auto mb-6 rounded-3xl bg-gradient-to-br from-background/80 via-primary/5 to-background/60 backdrop-blur-sm flex items-center justify-center shadow-lg shadow-primary/20 border border-primary/20">
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-40" />
-                  <Icon className="w-10 h-10 text-primary relative z-10" />
-                </div>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-[15px]">{step.description}</p>
                 
-                <h3 className="text-2xl font-bold mb-4 text-foreground">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                
-                {/* Modern connector arrow (hidden on last item and mobile) */}
+                {/* Connector arrow */}
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[55%] w-[90%]">
-                    <div className="h-[2px] bg-gradient-to-r from-primary/30 via-primary/20 to-transparent" />
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rotate-45 border-t-2 border-r-2 border-primary/30 -translate-x-1" />
+                  <div className="hidden lg:block absolute top-10 left-[58%] w-[84%]">
+                    <svg className="w-full h-6" viewBox="0 0 100 20" preserveAspectRatio="none">
+                      <defs>
+                        <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" style={{ stopColor: '#93c5fd', stopOpacity: 0.4 }} />
+                          <stop offset="100%" style={{ stopColor: '#93c5fd', stopOpacity: 0.1 }} />
+                        </linearGradient>
+                      </defs>
+                      <line x1="0" y1="10" x2="94" y2="10" stroke={`url(#gradient-${index})`} strokeWidth="2" />
+                      <polygon points="94,6 94,14 100,10" fill="#93c5fd" opacity="0.3" />
+                    </svg>
                   </div>
                 )}
               </div>
