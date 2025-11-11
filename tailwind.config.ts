@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Satoshi', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        recoleta: ['Recoleta', 'serif'],
+        recoleta: ['Canela', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
