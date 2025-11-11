@@ -50,7 +50,7 @@ const Benefits = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">{benefit.title}</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">{benefit.description}</p>
-                <div className="inline-block bg-accent/10 text-accent font-semibold font-sf-pro px-3 py-1 rounded-full text-sm">
+                <div className="inline-block bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 text-primary font-semibold font-sf-pro px-4 py-2 rounded-full text-sm border border-primary/30 shadow-lg shadow-primary/20 backdrop-blur-sm">
                   {benefit.stat}
                 </div>
               </Card>;
