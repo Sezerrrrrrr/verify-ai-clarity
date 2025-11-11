@@ -48,14 +48,12 @@ const HowItWorks = () => {
                 <h3 className="text-2xl font-bold mb-3 text-foreground">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 
-                {/* Connector dot line */}
+                {/* Arrow connector */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-[58%] w-[84%]">
-                    <div className="flex items-center h-px">
-                      <div className="flex-1 h-px bg-gradient-to-r from-blue-300/40 to-blue-200/20" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-300/50 mx-1" />
-                      <div className="w-1 h-1 rounded-full bg-blue-300/40 mx-0.5" />
-                      <div className="w-0.5 h-0.5 rounded-full bg-blue-300/30" />
+                  <div className="hidden lg:block absolute top-10 left-[60%] w-[80%]">
+                    <div className="flex items-center">
+                      <div className="flex-1 h-0.5 bg-gradient-to-r from-blue-400/60 to-blue-300/40" />
+                      <div className="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-blue-300/60" />
                     </div>
                   </div>
                 )}
