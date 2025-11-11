@@ -47,10 +47,11 @@ const HowItWorks = () => {
                   {/* Arrow connector - positioned next to number */}
                   {index < steps.length - 1 && (
                     <div className="hidden md:block absolute left-full top-1/2 -translate-y-1/2 w-[calc(100vw/3-120px)] max-w-[280px] px-8">
-                      <div className="flex items-center">
-                        <div className="flex-1 h-[3px] bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300" />
-                        <svg className="w-4 h-4 text-blue-400 -ml-1" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M10 3l7 7-7 7V3z" />
+                      <div className="relative flex items-center gap-1">
+                        <div className="flex-1 h-[1px] bg-gradient-to-r from-blue-400/60 via-blue-300/40 to-blue-200/30" />
+                        <div className="flex-1 h-[1px] bg-gradient-to-r from-blue-200/30 via-blue-300/40 to-blue-400/50" />
+                        <svg className="w-3 h-3 text-blue-400/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
                     </div>
