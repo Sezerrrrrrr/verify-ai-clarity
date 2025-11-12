@@ -166,7 +166,7 @@ const Calculator = () => {
             </div>
 
             {/* Right Column - Results */}
-            <div className={`transition-all duration-500 ${showResults ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+            <div className="transition-all duration-500">
               <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-primary/10">
                 <h2 className="text-3xl font-bold text-foreground mb-8">Results Summary</h2>
 
@@ -175,7 +175,7 @@ const Calculator = () => {
                   <p className="text-primary-foreground/90 text-sm font-sf-pro uppercase tracking-wider mb-3">
                     YOUR ANNUAL SAVINGS
                   </p>
-                  <p className="text-5xl md:text-6xl font-bold text-primary-foreground mb-2">
+                  <p className={`text-5xl md:text-6xl font-bold text-primary-foreground mb-2 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
                     ${Math.round(netSavings).toLocaleString()}
                   </p>
                   <p className="text-primary-foreground/80 text-sm">per year with Azops</p>
@@ -185,21 +185,21 @@ const Calculator = () => {
                 <div className="space-y-6 mb-8">
                   <div className="flex justify-between items-center">
                     <span className="text-foreground">Monthly Time Saved</span>
-                    <span className="text-2xl font-bold text-emerald-600">
+                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
                       {Math.round(monthlyTimeSavedHours)} <span className="text-base font-normal">hours</span>
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
                     <span className="text-foreground">Annual Verifications</span>
-                    <span className="text-2xl font-bold text-emerald-600">
+                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
                       {Math.round(annualVerifications).toLocaleString()} <span className="text-base font-normal">verifications</span>
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
                     <span className="text-foreground">Staff Time Per Verification</span>
-                    <span className="text-2xl font-bold text-emerald-600">
+                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
                       -{Math.round(timeReductionPercentage)}% <span className="text-base font-normal text-muted-foreground">
                         ({Math.round(currentTimePerVerification)} min vs current)
                       </span>
@@ -213,14 +213,14 @@ const Calculator = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Current annual cost</span>
-                      <span className="text-xl font-semibold text-foreground">
+                      <span className={`text-xl font-semibold text-foreground transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
                         ${Math.round(currentAnnualCost).toLocaleString()}
                       </span>
                     </div>
 
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Azops annual cost</span>
-                      <span className="text-xl font-semibold text-foreground">
+                      <span className={`text-xl font-semibold text-foreground transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
                         ${Math.round(azopsAnnualCost).toLocaleString()}
                       </span>
                     </div>
@@ -229,7 +229,7 @@ const Calculator = () => {
 
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-foreground">Net savings</span>
-                      <span className="text-2xl font-bold text-emerald-600">
+                      <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
                         ${Math.round(netSavings).toLocaleString()}
                       </span>
                     </div>
