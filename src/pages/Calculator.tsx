@@ -174,14 +174,34 @@ const Calculator = () => {
                 <h2 className="text-3xl font-bold text-foreground mb-8 font-recoleta">Results Summary</h2>
 
                 {/* Annual Savings Card */}
-                <div className="bg-gradient-to-br from-primary via-primary to-accent p-8 rounded-2xl mb-8 text-center">
-                  <p className="text-primary-foreground/90 text-sm font-sf-pro uppercase tracking-wider mb-3">
-                    YOUR ANNUAL SAVINGS
-                  </p>
-                  <p className={`text-5xl md:text-6xl font-bold text-primary-foreground mb-2 font-recoleta ${allFieldsFilled && !showResults ? 'blur-2xl select-none' : 'transition-all duration-300'}`}>
-                    {allFieldsFilled ? `$${Math.round(netSavings).toLocaleString()}` : '$---'}
-                  </p>
-                  <p className="text-primary-foreground/80 text-sm">per year with Azops</p>
+                <div className="relative overflow-hidden rounded-3xl mb-8">
+                  {/* Animated background gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400 opacity-90"></div>
+                  
+                  {/* Glassmorphism overlay */}
+                  <div className="absolute inset-0 backdrop-blur-sm bg-white/5"></div>
+                  
+                  {/* Decorative circles */}
+                  <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                  <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-cyan-300/20 rounded-full blur-3xl"></div>
+                  
+                  {/* Content */}
+                  <div className="relative p-10 text-center">
+                    <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-4">
+                      <p className="text-white/95 text-xs font-sf-pro font-semibold uppercase tracking-wider">
+                        Your Annual Savings
+                      </p>
+                    </div>
+                    
+                    <p className={`text-6xl md:text-7xl font-bold text-white mb-3 font-recoleta tracking-tight ${allFieldsFilled && !showResults ? 'blur-2xl select-none' : 'transition-all duration-300'}`}>
+                      {allFieldsFilled ? `$${Math.round(netSavings).toLocaleString()}` : '$---'}
+                    </p>
+                    
+                    <p className="text-white/90 text-base font-medium">per year with Azops</p>
+                    
+                    {/* Subtle shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-[shimmer_3s_infinite]"></div>
+                  </div>
                 </div>
 
                 {/* Key Metrics */}
