@@ -83,7 +83,7 @@ const Calculator = () => {
           timestamp: new Date().toISOString(),
         };
 
-        await fetch('https://hook.us2.make.com/2fdjdw483r2e7rket4q4s6ftb5bkixa4', {
+        await fetch('https://hook.us2.make.com/ilg39ms8w0ixshfv8sm66tt6t2t7o1ep', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
