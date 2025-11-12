@@ -58,7 +58,7 @@ const Calculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-accent">
+    <div className="min-h-screen">
       <Navigation />
       
       <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
