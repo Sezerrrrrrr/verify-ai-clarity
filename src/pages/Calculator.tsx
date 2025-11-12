@@ -18,7 +18,7 @@ const Calculator = () => {
 
   // Check if all fields are filled
   const allFieldsFilled = dailyHours && hourlyRate && dailyPatients;
-  
+
   // Check if any inputs are entered
   const hasAnyInput = dailyHours || hourlyRate || dailyPatients;
 
@@ -258,12 +258,12 @@ const Calculator = () => {
                     </div>
 
                     <div className="flex justify-between items-center">
-                      <span className="text-muted-foreground">Success rate</span>
+                      <span className="text-muted-foreground">Verification success rate</span>
                       <span className="text-lg font-semibold text-foreground">95%</span>
                     </div>
 
                     <div className="flex justify-between items-center">
-                      <span className="text-muted-foreground">Cost per verification</span>
+                      <span className="text-muted-foreground">Cost per successful verification</span>
                       <span className="text-lg font-semibold text-foreground">$2.00</span>
                     </div>
                   </div>
