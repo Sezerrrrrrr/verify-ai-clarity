@@ -9,7 +9,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg-dental-clinic.png";
-
 const Calculator = () => {
   const [dailyHours, setDailyHours] = useState("");
   const [hourlyRate, setHourlyRate] = useState("");
@@ -30,7 +29,7 @@ const Calculator = () => {
   const successRate = 0.95; // 95% success rate
   const azopsCostPerVerification = 2;
   const timePerVerificationAzops = 1; // 1 minute with Azops
-  
+
   const dailyHoursNum = parseFloat(dailyHours) || 0;
   const hourlyRateNum = parseFloat(hourlyRate) || 0;
   const dailyPatientsNum = parseFloat(dailyPatients) || 0;
@@ -48,20 +47,17 @@ const Calculator = () => {
   // Time Saved: (Current hours - 1 min per verification) × Working days
   const currentMinutesPerDay = dailyHoursNum * 60;
   const azopsMinutesPerDay = dailyPatientsNum * timePerVerificationAzops;
-  const timeReductionPercentage = ((currentMinutesPerDay - azopsMinutesPerDay) / currentMinutesPerDay) * 100;
-  const monthlyTimeSavedHours = ((currentMinutesPerDay - azopsMinutesPerDay) * workingDays) / 60 / 12;
+  const timeReductionPercentage = (currentMinutesPerDay - azopsMinutesPerDay) / currentMinutesPerDay * 100;
+  const monthlyTimeSavedHours = (currentMinutesPerDay - azopsMinutesPerDay) * workingDays / 60 / 12;
 
   // Current time per verification
-  const currentTimePerVerification = dailyPatientsNum > 0 ? (dailyHoursNum * 60) / dailyPatientsNum : 0;
-
+  const currentTimePerVerification = dailyPatientsNum > 0 ? dailyHoursNum * 60 / dailyPatientsNum : 0;
   const handleShowResults = () => {
     if (email) {
       setShowResults(true);
     }
   };
-
-  return (
-    <div className="min-h-screen relative">
+  return <div className="min-h-screen relative">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroBg} alt="Background" className="w-full h-full object-cover" />
@@ -75,10 +71,7 @@ const Calculator = () => {
             {/* Left Column - Input Form */}
             <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-primary/10">
               <h1 className="text-3xl font-bold text-foreground mb-4">How much money can you save every year by implementing an AI insurer verifier</h1>
-              <p className="text-muted-foreground mb-8">
-                Enter your current insurance verification metrics to calculate your potential ROI with Azops AI. 
-                Our calculator uses real practice data to project your time and cost savings.
-              </p>
+              <p className="text-muted-foreground mb-8">Calculate your potential ROI with Azops. Our calculator uses real practice data to project your time and cost savings.</p>
 
               <TooltipProvider>
                 <div className="space-y-6">
@@ -97,15 +90,7 @@ const Calculator = () => {
                         </TooltipContent>
                       </Tooltip>
                     </div>
-                    <Input
-                      id="dailyHours"
-                      type="number"
-                      step="0.5"
-                      placeholder="e.g., 9"
-                      value={dailyHours}
-                      onChange={(e) => setDailyHours(e.target.value)}
-                      className="text-lg max-w-[200px]"
-                    />
+                    <Input id="dailyHours" type="number" step="0.5" placeholder="e.g., 9" value={dailyHours} onChange={e => setDailyHours(e.target.value)} className="text-lg max-w-[200px]" />
                   </div>
 
                   {/* Hourly Rate */}
@@ -125,15 +110,7 @@ const Calculator = () => {
                     </div>
                     <div className="relative">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
-                      <Input
-                        id="hourlyRate"
-                        type="number"
-                        step="1"
-                        placeholder="e.g., 25"
-                        value={hourlyRate}
-                        onChange={(e) => setHourlyRate(e.target.value)}
-                        className="pl-7 text-lg max-w-[200px]"
-                      />
+                      <Input id="hourlyRate" type="number" step="1" placeholder="e.g., 25" value={hourlyRate} onChange={e => setHourlyRate(e.target.value)} className="pl-7 text-lg max-w-[200px]" />
                     </div>
                   </div>
 
@@ -152,42 +129,21 @@ const Calculator = () => {
                         </TooltipContent>
                       </Tooltip>
                     </div>
-                    <Input
-                      id="dailyPatients"
-                      type="number"
-                      step="1"
-                      placeholder="e.g., 27"
-                      value={dailyPatients}
-                      onChange={(e) => setDailyPatients(e.target.value)}
-                      className="text-lg max-w-[200px]"
-                    />
+                    <Input id="dailyPatients" type="number" step="1" placeholder="e.g., 27" value={dailyPatients} onChange={e => setDailyPatients(e.target.value)} className="text-lg max-w-[200px]" />
                   </div>
 
                   {/* Email Field - Only shows when all fields filled */}
-                  {allFieldsFilled && !showResults && (
-                    <div className="animate-fade-in">
+                  {allFieldsFilled && !showResults && <div className="animate-fade-in">
                       <Label htmlFor="email" className="text-foreground font-medium">
                         Email address
                       </Label>
                       <div className="flex gap-3 mt-2">
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="your@email.com"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          className="text-lg flex-1"
-                        />
-                        <Button
-                          onClick={handleShowResults}
-                          disabled={!email}
-                          className="relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000 font-sf-pro px-8"
-                        >
+                        <Input id="email" type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} className="text-lg flex-1" />
+                        <Button onClick={handleShowResults} disabled={!email} className="relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000 font-sf-pro px-8">
                           Show Results
                         </Button>
                       </div>
-                    </div>
-                  )}
+                    </div>}
                 </div>
               </TooltipProvider>
 
@@ -291,11 +247,7 @@ const Calculator = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Button 
-                  size="lg" 
-                  className="w-full mt-8 relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] font-sf-pro text-lg py-6 transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000"
-                  asChild
-                >
+                <Button size="lg" className="w-full mt-8 relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] font-sf-pro text-lg py-6 transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000" asChild>
                   <a href="/demo">
                     See a Video Demo →
                   </a>
@@ -307,8 +259,6 @@ const Calculator = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Calculator;
