@@ -74,14 +74,7 @@ const Calculator = () => {
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Left Column - Input Form */}
             <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-primary/10">
-              <div className="flex items-center gap-2 mb-6">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  <ShieldCheck className="w-5 h-5 text-primary" />
-                </div>
-                <span className="text-sm font-sf-pro text-primary font-semibold">SOC2 & HIPAA Compliant</span>
-              </div>
-
-              <h1 className="text-3xl font-bold text-foreground mb-4">Your Practice Settings</h1>
+              <h1 className="text-3xl font-bold text-foreground mb-4">How much money can you save every year by implementing an AI insurer verifier</h1>
               <p className="text-muted-foreground mb-8">
                 Enter your current insurance verification metrics to calculate your potential ROI with Azops AI. 
                 Our calculator uses real practice data to project your time and cost savings.
