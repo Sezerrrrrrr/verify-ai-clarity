@@ -23,6 +23,9 @@ const Navigation = () => {
             <a href="#faq" className="text-foreground hover:text-primary transition-colors font-medium">
               FAQ
             </a>
+            <a href="/calculator" className="text-foreground hover:text-primary transition-colors font-medium">
+              ROI Calculator
+            </a>
           </div>
           
           {/* CTA */}
