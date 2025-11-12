@@ -142,7 +142,7 @@ const Calculator = () => {
                       </Label>
                       <div className="flex gap-3 mt-2">
                         <Input id="email" type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} className="text-lg flex-[2]" />
-                        <Button onClick={handleShowResults} disabled={!email} className="relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000 font-sf-pro px-4 whitespace-nowrap">
+                        <Button onClick={handleShowResults} disabled={!email} className="relative overflow-hidden border-2 border-black text-white bg-black hover:text-gray-300 hover:[text-shadow:0_0_20px_rgba(0,0,0,0.8)] hover:bg-black hover:scale-105 hover:shadow-[0_0_40px_rgba(0,0,0,0.8)] shadow-[0_0_30px_rgba(0,0,0,0.5)] font-sf-pro px-4 whitespace-nowrap transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-black/60 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
                           Show Results
                         </Button>
                       </div>
