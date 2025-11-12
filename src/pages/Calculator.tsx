@@ -61,7 +61,10 @@ const Calculator = () => {
       setShowResults(true);
       // Scroll to results section on mobile
       setTimeout(() => {
-        resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        resultsRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }, 100);
     }
   };
@@ -78,7 +81,7 @@ const Calculator = () => {
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Left Column - Input Form */}
             <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-primary/10 max-w-sm">
-              <h1 className="text-3xl font-bold text-foreground mb-4">How much money can you save every year by implementing an AI insurer verifier</h1>
+              <h1 className="text-3xl font-bold text-foreground mb-4">How much money can you save every year by implementing an AI insurance verifier</h1>
               <p className="text-muted-foreground mb-8">Calculate your potential ROI with Azops. Our calculator uses real practice data to project your time and cost savings.</p>
 
               <TooltipProvider>
