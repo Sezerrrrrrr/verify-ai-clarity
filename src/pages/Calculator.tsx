@@ -86,7 +86,7 @@ const Calculator = () => {
                           <Info className="w-4 h-4 text-muted-foreground" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Average hours your staff spends per day on insurance verification tasks</p>
+                          <p>Total hours spent by the office manager, front desk, billing specialist or any other person in your team that helps with insurance verification.</p>
                         </TooltipContent>
                       </Tooltip>
                     </div>
@@ -104,7 +104,7 @@ const Calculator = () => {
                           <Info className="w-4 h-4 text-muted-foreground" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Average hourly rate including benefits</p>
+                          <p>Average hourly rate of the people working on insurance verification.</p>
                         </TooltipContent>
                       </Tooltip>
                     </div>
@@ -125,7 +125,7 @@ const Calculator = () => {
                           <Info className="w-4 h-4 text-muted-foreground" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Number of patients requiring insurance verification each day</p>
+                          <p>How many patients (existing or new) do you need to verify insurance for.</p>
                         </TooltipContent>
                       </Tooltip>
                     </div>
