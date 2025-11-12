@@ -214,18 +214,23 @@ const Calculator = () => {
                   </div>
 
                   <div className="flex justify-between items-center">
-                    <span className="text-foreground">Annual Verifications</span>
+                    <span className="text-foreground">Monthly Money Saved</span>
                     <span className={`text-2xl font-bold text-emerald-600 ${allFieldsFilled && !showResults ? 'blur-2xl select-none' : 'transition-all duration-300'}`}>
-                      {allFieldsFilled ? Math.round(annualVerifications).toLocaleString() : '---'} <span className="text-base font-normal">verifications</span>
+                      {allFieldsFilled ? `$${Math.round(netSavings / 12).toLocaleString()}` : '$---'}
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
-                    <span className="text-foreground">Staff Time Per Verification</span>
+                    <span className="text-foreground">Successful Verifications Per Month</span>
                     <span className={`text-2xl font-bold text-emerald-600 ${allFieldsFilled && !showResults ? 'blur-2xl select-none' : 'transition-all duration-300'}`}>
-                      {allFieldsFilled ? `-${Math.round(timeReductionPercentage)}%` : '---'} <span className="text-base font-normal text-muted-foreground">
-                        {allFieldsFilled && `(${Math.round(currentTimePerVerification)} min vs current)`}
-                      </span>
+                      {allFieldsFilled ? Math.round(annualVerifications / 12).toLocaleString() : '---'} <span className="text-base font-normal">verifications</span>
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between items-center">
+                    <span className="text-foreground">Annual Verifications</span>
+                    <span className={`text-2xl font-bold text-emerald-600 ${allFieldsFilled && !showResults ? 'blur-2xl select-none' : 'transition-all duration-300'}`}>
+                      {allFieldsFilled ? Math.round(annualVerifications).toLocaleString() : '---'} <span className="text-base font-normal">verifications</span>
                     </span>
                   </div>
                 </div>
