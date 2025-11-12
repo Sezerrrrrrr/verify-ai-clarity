@@ -90,7 +90,7 @@ const Calculator = () => {
                         </TooltipContent>
                       </Tooltip>
                     </div>
-                    <Input id="dailyHours" type="number" step="0.5" placeholder="Add Numeric Value" value={dailyHours} onChange={e => setDailyHours(e.target.value)} className="text-sm max-w-[120px]" />
+                    <Input id="dailyHours" type="number" step="0.5" placeholder="Add Numeric Value" value={dailyHours} onChange={e => setDailyHours(e.target.value)} className="text-sm max-w-[150px] placeholder:text-xs" />
                   </div>
 
                   {/* Hourly Rate */}
@@ -110,7 +110,7 @@ const Calculator = () => {
                     </div>
                     <div className="relative">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
-                      <Input id="hourlyRate" type="number" step="1" placeholder="Add Numeric Value" value={hourlyRate} onChange={e => setHourlyRate(e.target.value)} className="pl-7 text-sm max-w-[120px]" />
+                      <Input id="hourlyRate" type="number" step="1" placeholder="Add Numeric Value" value={hourlyRate} onChange={e => setHourlyRate(e.target.value)} className="pl-7 text-sm max-w-[150px] placeholder:text-xs" />
                     </div>
                   </div>
 
@@ -129,7 +129,7 @@ const Calculator = () => {
                         </TooltipContent>
                       </Tooltip>
                     </div>
-                    <Input id="dailyPatients" type="number" step="1" placeholder="Add Numeric Value" value={dailyPatients} onChange={e => setDailyPatients(e.target.value)} className="text-sm max-w-[120px]" />
+                    <Input id="dailyPatients" type="number" step="1" placeholder="Add Numeric Value" value={dailyPatients} onChange={e => setDailyPatients(e.target.value)} className="text-sm max-w-[150px] placeholder:text-xs" />
                   </div>
 
                   {/* Email Field - Only shows when all fields filled */}
