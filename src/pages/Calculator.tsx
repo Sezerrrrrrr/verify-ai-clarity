@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,6 +15,7 @@ const Calculator = () => {
   const [dailyPatients, setDailyPatients] = useState("");
   const [email, setEmail] = useState("");
   const [showResults, setShowResults] = useState(false);
+  const resultsRef = useRef<HTMLDivElement>(null);
 
   // Check if all fields are filled
   const allFieldsFilled = dailyHours && hourlyRate && dailyPatients;
@@ -58,6 +59,10 @@ const Calculator = () => {
   const handleShowResults = () => {
     if (email) {
       setShowResults(true);
+      // Scroll to results section on mobile
+      setTimeout(() => {
+        resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
     }
   };
   return <div className="min-h-screen relative">
@@ -169,7 +174,7 @@ const Calculator = () => {
             </div>
 
             {/* Right Column - Results */}
-            <div className="transition-all duration-500">
+            <div ref={resultsRef} className="transition-all duration-500">
               <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-4 sm:p-8 shadow-2xl border border-primary/10">
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 font-recoleta">Results Summary</h2>
 
