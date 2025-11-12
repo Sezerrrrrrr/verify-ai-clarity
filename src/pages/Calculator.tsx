@@ -6,6 +6,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ShieldCheck, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg-dental-clinic.png";
 
 const Calculator = () => {
@@ -71,7 +73,7 @@ const Calculator = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Left Column - Input Form */}
-            <div className="bg-background rounded-2xl p-8 shadow-2xl">
+            <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-primary/10">
               <div className="flex items-center gap-2 mb-6">
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <ShieldCheck className="w-5 h-5 text-primary" />
@@ -186,7 +188,7 @@ const Calculator = () => {
                         <Button
                           onClick={handleShowResults}
                           disabled={!email}
-                          className="relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground font-sf-pro px-8 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000"
+                          className="relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000 font-sf-pro px-8"
                         >
                           Show Results
                         </Button>
@@ -196,20 +198,27 @@ const Calculator = () => {
                 </div>
               </TooltipProvider>
 
-              {/* Calculation Explanation */}
-              <div className="mt-8 p-4 bg-amber-50 border-l-4 border-amber-500 rounded">
-                <p className="text-sm font-semibold text-amber-900 mb-2">How we calculate your savings:</p>
-                <div className="text-sm text-amber-800 space-y-1">
-                  <p><strong>Current Cost:</strong> Daily hours × Hourly rate × Working days (260/year)</p>
-                  <p><strong>Azops Cost:</strong> $2 per successful verification × Daily patients × Success rate (95%) × Working days</p>
-                  <p><strong>Time Saved:</strong> (Current hours - 1 min per verification) × Working days</p>
+              {/* Calculation Explanation - Collapsible */}
+              <Collapsible className="mt-8">
+                <div className="p-4 bg-amber-50 border-l-4 border-amber-500 rounded">
+                  <CollapsibleTrigger className="w-full flex items-center justify-between text-left group">
+                    <p className="text-sm font-semibold text-amber-900">How we calculate your savings:</p>
+                    <ChevronDown className="w-4 h-4 text-amber-900 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2">
+                    <div className="text-sm text-amber-800 space-y-1">
+                      <p><strong>Current Cost:</strong> Daily hours × Hourly rate × Working days (260/year)</p>
+                      <p><strong>Azops Cost:</strong> $2 per successful verification × Daily patients × Success rate (95%) × Working days</p>
+                      <p><strong>Time Saved:</strong> (Current hours - 1 min per verification) × Working days</p>
+                    </div>
+                  </CollapsibleContent>
                 </div>
-              </div>
+              </Collapsible>
             </div>
 
             {/* Right Column - Results */}
             <div className={`transition-all duration-500 ${showResults ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
-              <div className="bg-background rounded-2xl p-8 shadow-2xl">
+              <div className="bg-background/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-primary/10">
                 <h2 className="text-3xl font-bold text-foreground mb-8">Results Summary</h2>
 
                 {/* Annual Savings Card */}
@@ -291,7 +300,7 @@ const Calculator = () => {
                 {/* CTA Button */}
                 <Button 
                   size="lg" 
-                  className="w-full mt-8 relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-sf-pro text-lg py-6 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000"
+                  className="w-full mt-8 relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] font-sf-pro text-lg py-6 transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000"
                   asChild
                 >
                   <a href="/demo">
