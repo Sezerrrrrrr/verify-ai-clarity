@@ -274,12 +274,19 @@ const Calculator = () => {
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <Button size="lg" className="w-full mt-8 relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] font-sf-pro text-lg py-6 transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000" asChild>
-                  <a href="/demo">
-                    See a Video Demo →
-                  </a>
-                </Button>
+                {/* CTA Buttons */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                  <Button size="lg" className="relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] font-sf-pro text-lg py-6 transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000" asChild>
+                    <a href="/demo">
+                      See a Video Demo →
+                    </a>
+                  </Button>
+                  <Button size="lg" className="relative overflow-hidden border-2 border-primary text-foreground bg-primary/10 hover:text-primary hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-primary/20 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] shadow-[0_0_30px_rgba(59,130,246,0.3)] font-sf-pro text-lg py-6 transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000" asChild>
+                    <a href="https://calendly.com/sezer123/call" target="_blank" rel="noopener noreferrer">
+                      Automate Insurance Verification
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
