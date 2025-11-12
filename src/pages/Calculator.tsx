@@ -18,6 +18,9 @@ const Calculator = () => {
 
   // Check if all fields are filled
   const allFieldsFilled = dailyHours && hourlyRate && dailyPatients;
+  
+  // Check if any inputs are entered
+  const hasAnyInput = dailyHours || hourlyRate || dailyPatients;
 
   // Reset results when inputs change
   useEffect(() => {
@@ -175,8 +178,8 @@ const Calculator = () => {
                   <p className="text-primary-foreground/90 text-sm font-sf-pro uppercase tracking-wider mb-3">
                     YOUR ANNUAL SAVINGS
                   </p>
-                  <p className={`text-5xl md:text-6xl font-bold text-primary-foreground mb-2 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
-                    ${Math.round(netSavings).toLocaleString()}
+                  <p className={`text-5xl md:text-6xl font-bold text-primary-foreground mb-2 transition-all duration-300 ${hasAnyInput && !showResults ? 'blur-md select-none' : ''}`}>
+                    {hasAnyInput ? `$${Math.round(netSavings).toLocaleString()}` : '$---'}
                   </p>
                   <p className="text-primary-foreground/80 text-sm">per year with Azops</p>
                 </div>
@@ -185,23 +188,23 @@ const Calculator = () => {
                 <div className="space-y-6 mb-8">
                   <div className="flex justify-between items-center">
                     <span className="text-foreground">Monthly Time Saved</span>
-                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
-                      {Math.round(monthlyTimeSavedHours)} <span className="text-base font-normal">hours</span>
+                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${hasAnyInput && !showResults ? 'blur-md select-none' : ''}`}>
+                      {hasAnyInput ? Math.round(monthlyTimeSavedHours) : '---'} <span className="text-base font-normal">hours</span>
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
                     <span className="text-foreground">Annual Verifications</span>
-                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
-                      {Math.round(annualVerifications).toLocaleString()} <span className="text-base font-normal">verifications</span>
+                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${hasAnyInput && !showResults ? 'blur-md select-none' : ''}`}>
+                      {hasAnyInput ? Math.round(annualVerifications).toLocaleString() : '---'} <span className="text-base font-normal">verifications</span>
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
                     <span className="text-foreground">Staff Time Per Verification</span>
-                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
-                      -{Math.round(timeReductionPercentage)}% <span className="text-base font-normal text-muted-foreground">
-                        ({Math.round(currentTimePerVerification)} min vs current)
+                    <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${hasAnyInput && !showResults ? 'blur-md select-none' : ''}`}>
+                      {hasAnyInput ? `-${Math.round(timeReductionPercentage)}%` : '---'} <span className="text-base font-normal text-muted-foreground">
+                        {hasAnyInput && `(${Math.round(currentTimePerVerification)} min vs current)`}
                       </span>
                     </span>
                   </div>
@@ -213,15 +216,15 @@ const Calculator = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Current annual cost</span>
-                      <span className={`text-xl font-semibold text-foreground transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
-                        ${Math.round(currentAnnualCost).toLocaleString()}
+                      <span className={`text-xl font-semibold text-foreground transition-all duration-300 ${hasAnyInput && !showResults ? 'blur-md select-none' : ''}`}>
+                        {hasAnyInput ? `$${Math.round(currentAnnualCost).toLocaleString()}` : '$---'}
                       </span>
                     </div>
 
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Azops annual cost</span>
-                      <span className={`text-xl font-semibold text-foreground transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
-                        ${Math.round(azopsAnnualCost).toLocaleString()}
+                      <span className={`text-xl font-semibold text-foreground transition-all duration-300 ${hasAnyInput && !showResults ? 'blur-md select-none' : ''}`}>
+                        {hasAnyInput ? `$${Math.round(azopsAnnualCost).toLocaleString()}` : '$---'}
                       </span>
                     </div>
 
@@ -229,8 +232,8 @@ const Calculator = () => {
 
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-foreground">Net savings</span>
-                      <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${!showResults ? 'blur-md select-none' : ''}`}>
-                        ${Math.round(netSavings).toLocaleString()}
+                      <span className={`text-2xl font-bold text-emerald-600 transition-all duration-300 ${hasAnyInput && !showResults ? 'blur-md select-none' : ''}`}>
+                        {hasAnyInput ? `$${Math.round(netSavings).toLocaleString()}` : '$---'}
                       </span>
                     </div>
 
