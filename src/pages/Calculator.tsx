@@ -104,7 +104,7 @@ const Calculator = () => {
                       placeholder="e.g., 9"
                       value={dailyHours}
                       onChange={(e) => setDailyHours(e.target.value)}
-                      className="text-lg"
+                      className="text-lg max-w-[200px]"
                     />
                   </div>
 
@@ -132,7 +132,7 @@ const Calculator = () => {
                         placeholder="e.g., 25"
                         value={hourlyRate}
                         onChange={(e) => setHourlyRate(e.target.value)}
-                        className="pl-7 text-lg"
+                        className="pl-7 text-lg max-w-[200px]"
                       />
                     </div>
                   </div>
@@ -159,7 +159,7 @@ const Calculator = () => {
                       placeholder="e.g., 27"
                       value={dailyPatients}
                       onChange={(e) => setDailyPatients(e.target.value)}
-                      className="text-lg"
+                      className="text-lg max-w-[200px]"
                     />
                   </div>
 
