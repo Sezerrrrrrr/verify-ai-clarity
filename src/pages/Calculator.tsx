@@ -8,7 +8,6 @@ import { ShieldCheck, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg-dental-clinic.png";
 const Calculator = () => {
   const [dailyHours, setDailyHours] = useState("");
   const [hourlyRate, setHourlyRate] = useState("");
@@ -68,15 +67,10 @@ const Calculator = () => {
       }, 100);
     }
   };
-  return <div className="min-h-screen relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img src={heroBg} alt="Background" className="w-full h-full object-cover object-center" />
-      </div>
-      
+  return <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100">
       <Navigation />
       
-      <main className="relative z-10 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Left Column - Input Form */}
