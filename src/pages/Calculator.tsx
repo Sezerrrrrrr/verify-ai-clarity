@@ -55,8 +55,44 @@ const Calculator = () => {
 
   // Current time per verification
   const currentTimePerVerification = dailyPatientsNum > 0 ? dailyHoursNum * 60 / dailyPatientsNum : 0;
-  const handleShowResults = () => {
+  const handleShowResults = async () => {
     if (email) {
+      // Send data to Make webhook
+      try {
+        const webhookData = {
+          // Input data
+          email,
+          dailyHours: dailyHoursNum,
+          hourlyRate: hourlyRateNum,
+          dailyPatients: dailyPatientsNum,
+          // Output data
+          currentAnnualCost: Math.round(currentAnnualCost),
+          azopsAnnualCost: Math.round(azopsAnnualCost),
+          netSavings: Math.round(netSavings),
+          annualSavings: Math.round(netSavings),
+          monthlySavings: Math.round(netSavings / 12),
+          monthlyTimeSavedHours: Math.round(monthlyTimeSavedHours),
+          annualVerifications: Math.round(annualVerifications),
+          monthlyVerifications: Math.round(annualVerifications / 12),
+          timeReductionPercentage: Math.round(timeReductionPercentage),
+          currentTimePerVerification: Math.round(currentTimePerVerification),
+          timestamp: new Date().toISOString(),
+        };
+
+        await fetch('https://hook.us2.make.com/o5qrlwnga7mhfwpp75kfdqz9uhu9g7mt', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookData),
+        });
+
+        console.log('Calculator data sent to Make webhook successfully');
+      } catch (error) {
+        console.error('Error sending data to Make webhook:', error);
+        // Continue to show results even if webhook fails
+      }
+
       setShowResults(true);
       // Scroll to results section on mobile
       setTimeout(() => {
