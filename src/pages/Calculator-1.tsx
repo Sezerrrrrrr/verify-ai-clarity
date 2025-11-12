@@ -12,7 +12,7 @@ const Calculator = () => {
   const [dailyHours, setDailyHours] = useState("");
   const [hourlyRate, setHourlyRate] = useState("");
   const [dailyPatients, setDailyPatients] = useState("");
-  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [showResults, setShowResults] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
 
@@ -56,12 +56,12 @@ const Calculator = () => {
   // Current time per verification
   const currentTimePerVerification = dailyPatientsNum > 0 ? dailyHoursNum * 60 / dailyPatientsNum : 0;
   const handleShowResults = async () => {
-    if (email) {
+    if (phoneNumber) {
       // Send data to Make webhook
       try {
         const webhookData = {
           // Input data
-          email,
+          phoneNumber,
           dailyHours: dailyHoursNum,
           hourlyRate: hourlyRateNum,
           dailyPatients: dailyPatientsNum,
@@ -173,14 +173,14 @@ const Calculator = () => {
                     <Input id="dailyPatients" type="number" step="1" placeholder="Add Numeric Value" value={dailyPatients} onChange={e => setDailyPatients(e.target.value)} className="text-sm max-w-[180px] placeholder:text-xs" />
                   </div>
 
-                  {/* Email Field - Only shows when all fields filled */}
+                  {/* Phone Number Field - Only shows when all fields filled */}
                   {allFieldsFilled && !showResults && <div className="animate-fade-in">
-                      <Label htmlFor="email" className="text-foreground font-medium">
-                        Email address
+                      <Label htmlFor="phoneNumber" className="text-foreground font-medium">
+                        Phone number
                       </Label>
                       <div className="flex gap-3 mt-2">
-                        <Input id="email" type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} className="text-xs sm:text-lg flex-[2]" />
-                        <Button onClick={handleShowResults} disabled={!email} className="relative overflow-hidden border-2 border-black text-white bg-black hover:text-gray-300 hover:[text-shadow:0_0_20px_rgba(0,0,0,0.8)] hover:bg-black hover:scale-105 hover:shadow-[0_0_40px_rgba(0,0,0,0.8)] shadow-[0_0_30px_rgba(0,0,0,0.5)] font-sf-pro px-4 whitespace-nowrap transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-black/60 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                        <Input id="phoneNumber" type="tel" placeholder="+1 (555) 000-0000" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} className="text-xs sm:text-lg flex-[2]" />
+                        <Button onClick={handleShowResults} disabled={!phoneNumber} className="relative overflow-hidden border-2 border-black text-white bg-black hover:text-gray-300 hover:[text-shadow:0_0_20px_rgba(0,0,0,0.8)] hover:bg-black hover:scale-105 hover:shadow-[0_0_40px_rgba(0,0,0,0.8)] shadow-[0_0_30px_rgba(0,0,0,0.5)] font-sf-pro px-4 whitespace-nowrap transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-black/60 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
                           Show Results
                         </Button>
                       </div>
