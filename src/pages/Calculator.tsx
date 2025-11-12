@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ShieldCheck, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import heroBg from "@/assets/hero-bg-dental-clinic.png";
 
 const Calculator = () => {
   const [dailyHours, setDailyHours] = useState("");
@@ -58,10 +59,15 @@ const Calculator = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img src={heroBg} alt="Background" className="w-full h-full object-cover" />
+      </div>
+      
       <Navigation />
       
-      <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <main className="relative z-10 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Left Column - Input Form */}
