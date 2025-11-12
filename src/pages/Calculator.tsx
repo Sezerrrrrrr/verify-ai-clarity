@@ -63,7 +63,7 @@ const Calculator = () => {
   return <div className="min-h-screen relative">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroBg} alt="Background" className="w-full h-full object-cover" />
+        <img src={heroBg} alt="Background" className="w-full h-full object-cover object-center" />
       </div>
       
       <Navigation />
