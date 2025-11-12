@@ -90,7 +90,7 @@ const Calculator = () => {
                         </TooltipContent>
                       </Tooltip>
                     </div>
-                    <Input id="dailyHours" type="number" step="0.5" placeholder="e.g., 9" value={dailyHours} onChange={e => setDailyHours(e.target.value)} className="text-lg max-w-[200px]" />
+                    <Input id="dailyHours" type="number" step="0.5" placeholder="e.g., 9" value={dailyHours} onChange={e => setDailyHours(e.target.value)} className="text-lg max-w-[120px]" />
                   </div>
 
                   {/* Hourly Rate */}
@@ -110,7 +110,7 @@ const Calculator = () => {
                     </div>
                     <div className="relative">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
-                      <Input id="hourlyRate" type="number" step="1" placeholder="e.g., 25" value={hourlyRate} onChange={e => setHourlyRate(e.target.value)} className="pl-7 text-lg max-w-[200px]" />
+                      <Input id="hourlyRate" type="number" step="1" placeholder="e.g., 25" value={hourlyRate} onChange={e => setHourlyRate(e.target.value)} className="pl-7 text-lg max-w-[120px]" />
                     </div>
                   </div>
 
@@ -129,7 +129,7 @@ const Calculator = () => {
                         </TooltipContent>
                       </Tooltip>
                     </div>
-                    <Input id="dailyPatients" type="number" step="1" placeholder="e.g., 27" value={dailyPatients} onChange={e => setDailyPatients(e.target.value)} className="text-lg max-w-[200px]" />
+                    <Input id="dailyPatients" type="number" step="1" placeholder="e.g., 27" value={dailyPatients} onChange={e => setDailyPatients(e.target.value)} className="text-lg max-w-[120px]" />
                   </div>
 
                   {/* Email Field - Only shows when all fields filled */}
