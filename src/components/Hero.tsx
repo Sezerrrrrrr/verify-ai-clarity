@@ -36,7 +36,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="relative overflow-hidden border-2 border-white text-black bg-white hover:text-blue-500 hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-white hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.8)] text-base md:text-lg px-4 md:px-6 py-6 max-w-xs mx-auto sm:mx-0 shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000" 
+              className="relative overflow-hidden border-2 border-white text-black bg-white hover:text-blue-500 hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-white hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.8)] text-sm md:text-lg px-3 md:px-6 py-4 md:py-6 max-w-xs mx-auto sm:mx-0 shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000" 
               asChild
             >
               <a href="/demo">See a video demo</a>
