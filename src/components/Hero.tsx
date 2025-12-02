@@ -49,7 +49,7 @@ const Hero = () => {
         }}>
             <div className="flex items-center gap-1 sm:gap-2">
               <CheckCircle2 className="w-3 h-3 md:w-5 md:h-5 text-white" />
-              <span className="text-xs md:text-base">30+ Clinics Trust Us</span>
+              <span className="text-xs md:text-base">300+ Clinics Trust Us</span>
             </div>
             <div className="flex items-center gap-1 sm:gap-2">
               
