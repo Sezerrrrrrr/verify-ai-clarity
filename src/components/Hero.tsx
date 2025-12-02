@@ -44,20 +44,20 @@ const Hero = () => {
           </div>
           
           {/* Social proof */}
-          <div className="flex flex-row items-center justify-center gap-3 sm:gap-6 text-white/80 animate-fade-in" style={{
+          <div className="flex flex-row items-center justify-center gap-2 sm:gap-6 text-white/80 animate-fade-in" style={{
           animationDelay: '700ms'
         }}>
             <div className="flex items-center gap-1 sm:gap-2">
-              <CheckCircle2 className="w-3 h-3 md:w-5 md:h-5 text-white" />
-              <span className="text-xs md:text-base">300+ Clinics Trust Us</span>
+              <CheckCircle2 className="w-2.5 h-2.5 md:w-5 md:h-5 text-white" />
+              <span className="text-[10px] md:text-base">300+ Clinics Trust Us</span>
             </div>
             <div className="flex items-center gap-1 sm:gap-2">
               
               
             </div>
             <div className="flex items-center gap-1 sm:gap-2">
-              <CheckCircle2 className="w-3 h-3 md:w-5 md:h-5 text-white" />
-              <span className="text-xs md:text-base">No contract commitment </span>
+              <CheckCircle2 className="w-2.5 h-2.5 md:w-5 md:h-5 text-white" />
+              <span className="text-[10px] md:text-base">No contract commitment </span>
             </div>
           </div>
         </div>
