@@ -1,12 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg-dental-clinic.png";
-import smileClinicLogo from "@/assets/customer-smile-clinic.png";
-import customerLogo1 from "@/assets/customer-logo-1.png";
-import customerLogo2 from "@/assets/customer-logo-2.png";
-import customerLogo3 from "@/assets/customer-logo-3.png";
-import dentylisLogo from "@/assets/customer-dentylis.png";
-import customerLogo5 from "@/assets/customer-logo-5.png";
 const Hero = () => {
   return <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-0">
       {/* Background */}
@@ -47,18 +41,6 @@ const Hero = () => {
             >
               <a href="/demo">See a video demo</a>
             </Button>
-          </div>
-
-          {/* Customer Logos */}
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 items-center justify-items-center mb-4 md:mb-12 animate-fade-in max-w-4xl mx-auto" style={{
-          animationDelay: '600ms'
-        }}>
-            <img src={smileClinicLogo} alt="Smile Clinic" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
-            <img src={customerLogo1} alt="Customer logo" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
-            <img src={customerLogo2} alt="Customer logo" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
-            <img src={customerLogo3} alt="Customer logo" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
-            <img src={dentylisLogo} alt="Dentylis" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
-            <img src={customerLogo5} alt="Customer logo" className="h-10 md:h-16 opacity-90 hover:opacity-100 transition-opacity" />
           </div>
           
           {/* Social proof */}
