@@ -25,7 +25,7 @@ const Hero = () => {
         }}>Save 200+ Hours Monthly on Dental Insurance Verification With AI</h1>
           
           {/* Description */}
-          <p className="text-base md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in" style={{
+          <p className="text-sm md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in" style={{
           animationDelay: '300ms'
         }}>Our AI agent calls your patients' insurances to verify eligibility and coverage details, saving you time and money - for $2/successful verification</p>
           
