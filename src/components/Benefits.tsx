@@ -6,7 +6,7 @@ import iconSecurity from "@/assets/icon-security.svg";
 import iconZap from "@/assets/icon-zap.svg";
 const benefits = [{
   icon: iconTime,
-  title: "Save 200+ Hours Monthly",
+  title: "Save 90+ Hours Monthly",
   description: "Automate the tedious insurance verification process and free up your staff for patient care.",
   stat: "95% time reduction"
 }, {
