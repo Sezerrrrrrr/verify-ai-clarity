@@ -22,7 +22,7 @@ const Hero = () => {
           {/* Heading */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in font-recoleta" style={{
           animationDelay: '200ms'
-        }}>Save 200+ Hours Monthly on Dental Insurance Verification With AI</h1>
+        }}>Save 90+ Hours Monthly on Dental Insurance Verification With AI</h1>
           
           {/* Description */}
           <p className="text-sm md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-8 animate-fade-in" style={{
@@ -33,12 +33,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in px-4" style={{
           animationDelay: '500ms'
         }}>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="relative overflow-hidden border-2 border-white text-black bg-white hover:text-blue-500 hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-white hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.8)] text-sm md:text-lg px-3 md:px-6 py-4 md:py-6 max-w-xs mx-auto sm:mx-0 shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000" 
-              asChild
-            >
+            <Button size="lg" variant="outline" className="relative overflow-hidden border-2 border-white text-black bg-white hover:text-blue-500 hover:[text-shadow:0_0_20px_rgba(59,130,246,0.8)] hover:bg-white hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.8)] text-sm md:text-lg px-3 md:px-6 py-4 md:py-6 max-w-xs mx-auto sm:mx-0 shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000" asChild>
               <a href="/demo">See a video demo</a>
             </Button>
           </div>
