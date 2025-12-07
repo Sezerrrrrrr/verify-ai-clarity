@@ -19,7 +19,7 @@ const Demo = () => {
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight">See a demo of the AI agent getting full coverage details over the phone</h1>
               
               {/* Subtitle */}
-              <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-12">Automate every insurance verification call for just $2 per successful verification, saving your clinic over $5,000 each month in wasted staff time.</p>
+              <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-12">Automate every insurance verification call for just $2 per successful verification</p>
               
               {/* Loom Video */}
               <div className="relative w-full mb-8" style={{
